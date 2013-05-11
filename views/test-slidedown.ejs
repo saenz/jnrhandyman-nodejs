@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+	<title>testing</title>
+	<style type="text/css">
+	#contact-form {
+		display: none;
+	}
+	</style>
+	<script>
+	$(document).ready(function() {
+		$('#contact-button').click(function() {
+			$('#contact-form').slideDown('slow',function() {
+				// animation complete
+			});
+		});
+	});
+	</script>
+</head>
+
+<body>
+
+	<button id="contact-button">Contact</button>
+
+	<div id="contact-form">
+		Form
+	</div>
+
+	<script src="http://code.jquery.com/jquery.js"></script>
+
+</body>

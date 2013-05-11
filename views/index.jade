@@ -1,0 +1,187 @@
+extends layout
+
+block content
+
+	// Billboard
+	#billboard
+		.row-fluid
+			.billboard-message
+				.span4.offset1
+					h1 Losing the fight with home repair?
+					h2 We'll whip that house back into shape. And if we can't do it we know someone who can.
+					.text-center
+						button(class="btn") Contact Us
+			.visible-tablet.visible-desktop.span7
+				.video
+					img(style="display:none", src="/images/bg_video_intro.png", width=476, height=281)
+					.iframe(style="padding-top:25px;padding-left:25px;")
+
+	// main container
+	.container
+		// .row
+			.span12
+
+		// Services
+		section.services
+			.row
+				.span12
+					h2.section-head.center Wide Range of Services
+					p.center.
+						We provide a number of maintenance services to help keep your home in shape. All work is guaranteed! A list of
+						services is shown below.
+			.row
+				.span12
+					.row
+						.span4
+							h3 General
+							ul
+								li Install Lights
+								li Painting
+								li Demolition
+								li Home Entertainment Installation
+								li Minor Plumbing
+								li Custom Carpentry (e.g. Bookcases, Shelves)
+								li Cleanup & Hauling
+							h3 Kitchen/Bath
+							ul
+								li Vanity and Toilet Install
+								li Tile Repair
+								li Appliance Installation
+								li Fixture Installation
+						.span4
+							h3 Home Exterior & Yard
+							ul
+								li Weather Stripping
+								li Install External Lighting
+								li Install Exterior Doors
+								li Gate & Fence Repair/Replacement
+								li Wood Rot Repair
+								li Tree Removal
+								li Landscaping
+								li Shed Installation
+							h3 Garage
+							ul
+								li Add Storage Space
+								li Install Shelving
+								li Mount Wall/Ceiling Racks
+								li Side Door Installation
+								li Replace Window Pane on Garage Window
+						.span4
+							h3 Seasonal
+							ul
+								li Gutter Cleaning
+								li Window Repair
+								li Insulation & Weather Stripping
+								li Paint Touch Ups
+							h3 Odd Jobs
+							ul
+								li Patch Drywall
+								li Install Pet Doors
+								li Install Flower Boxes
+								li Change Light Bulbs
+								li Hang Christmas Decorations
+								li Install Simple Alert System
+								li Assemble Furniture
+								li Hang Mirrors
+								li Home Storage Installation
+		
+		// Pricing
+		section.pricing
+			.row
+				.span12
+					h2.section-head.center Reasonable Prices
+				p.center.
+					You won't find a more reliable handyman service in the area with the same level of quality. And don't pay a dime until the work is completed.
+			.row
+				.span6
+					p
+						strong Get a free estimate today!
+					ul
+						li Quotes are provided on either hourly basis or by the project.
+						li Hourly rates run between $30-40 depending on the work.
+					p.text-center(style="padding:0")
+						button.btn(type="button") Request an Estimate
+				.span6
+					h3 Pricing
+					table.table.table-bordered
+						// caption(style="margin-bottom:5px") Standard Pricing
+						thead
+							tr(style="background-color:#efefef")
+								th Price
+								th Service
+						tbody
+							tr
+								td $60
+								td Basic ceiling fan installation.
+							tr
+								td $150
+								td Standard home entertainment installation.
+							tr
+								td $300
+								td External wall lighting installation(two lights).
+							tr
+								td $500
+								td Large tree removal with hauling.
+
+		// Service Area
+		section.servicearea
+			.row
+				.span12
+					h2.section-head.center Servicing Orange County
+					p.center We are currently able to provide service to Cypress and outlying areas. The cities covered are shown in adjacent map.
+			.row
+				.span6
+					h3 Here are some of the cities we service:
+					.row
+						.span3
+							ul
+								li Anaheim
+								li Buena Park
+								li Cypress
+								li Garden Grove
+								li Huntington Beach
+								li Los Alamitos
+						.span3
+							ul
+								li Rossmoor
+								li Seal Beach
+								li Stanton
+								li Westminister
+				.span6
+					h3 Service Area
+					img.img-polaroid(src='/images/service_area.png')   
+		
+		// Projects
+		section.projects
+			.row
+				.span12
+					h2.section-head.center Latest Projects
+					p.center
+						| Check out our J&R latest handyman projects. You name it we can do it! More coming soon.
+			.row
+				.span8.offset2
+					#myCarousel.carousel.slide
+						ol.carousel-indicators
+							li.active(data-target='#myCarousel', data-slide-to='0')
+							li(data-target='#myCarousel', data-slide-to='1')
+							li(data-target='#myCarousel', data-slide-to='2')
+						.carousel-inner
+							.item.active
+								img(src='/images/carousel-tv.jpg', alt='')
+								.carousel-caption
+									h4 The TV Center
+									p
+										| Clean & simple stand mounted LCD install with surround sound system. Bringing the theater home.
+							.item
+								img(src='/images/carousel-patio.jpg', alt='')
+								.carousel-caption
+								h4 The Patio
+								p
+									| Saving money! Keep those benjamins by restoring that  aging patio instead of replacing.
+							.item
+								img(src='/images/carousel-tree.jpg', alt='')
+								.carousel-caption
+								h4 Tree Removal
+								p Classic tree removal example. Chop and bag it.
+						a.left.carousel-control(href='#myCarousel', data-slide='prev') ‹
+						a.right.carousel-control(href='#myCarousel', data-slide='next') ›

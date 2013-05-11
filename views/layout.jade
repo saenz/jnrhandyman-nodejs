@@ -1,0 +1,74 @@
+// layout.jade
+!!! 5
+html
+	head
+		title #{title}
+		// styles
+		// link(rel='stylesheet',href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Ubuntu:400,700',try='text/css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+		link(rel='stylesheet', href='/stylesheets/main.css')
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name='description', content='J & R Handyman Services in Orange County')
+		link(rel='author', href='https://plus.google.com/u/1/110838921249868536327')
+		// fav icon
+	body
+		//if lt IE 7
+			p#chromeframe
+				| Your browser is obsolete. 
+				a(href='http://browsehappy.com/') Please upgrade to a different browser
+				|  or 
+				a(href='http://www.google.com/chromeframe/?redirect=true') Install Google Chrome Frame
+				|  to experience this site.
+	
+		// Navbar
+		#jnr-top-nav.navbar.navbar-inverse.navbar-fixed-top
+			.navbar-inner
+				.container
+					button(type="button",class="btn btn-navbar",data-toggle="collapse",data-target=".nav-collapse")
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a(class="brand",href="/") <img src="/images/jr_logo_horizontal.png"/>
+					// <h3>
+						a(href="tel:1-714-900-2139") 1-714-900-2139
+					.nav-collapse.collapse
+						ul.nav
+							li: a(href="/") Home
+							li: a(href="#about") About
+							li: a(href="/contactus") Contact Us
+
+		// content						
+		block content
+		
+		block footer
+		// Footer
+		footer.footer
+			.footer-nav
+				.container
+					.row
+						nav.span4
+							h2 Help & Support
+							ul
+								li: a(href="faq.html") Frequently Asked Questions
+								li: a(href="mailto:service@jnrhandyman.com") service@jnrhandyman.com
+						nav.span4.offset1
+							h2 Follow Us
+							ul
+								li: a(href="faq.html") Twitter
+								li: a(href="mailto:service@jnrhandyman.com") Facebook
+						nav.span3
+							h2 Connect
+							ul
+								li: a(href="tel:1-714-900-2139") 1-714-900-2139
+								li: a(href="/contact.html") Contact Us
+			.the-end
+				.container
+					| This site was designed by 
+					a(href='jeffsaenz.com') Jeff Saenz
+		block scripts
+			script(src='http://code.jquery.com/jquery.js')
+			script(src='/javascripts/bootstrap.min.js')
+			script(src='/javascripts/main.js')
+

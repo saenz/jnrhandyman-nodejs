@@ -1,0 +1,35 @@
+<!doctype html>
+<head>
+	<title>testing</title>
+	<style type="text/css">
+	#contact-form {
+		display: none;
+	}
+	</style>
+
+</head>
+
+<body>
+
+	<div id="test">
+		xxx
+		<br>
+		sss
+	<button id="contact-button">Contact</button>
+</div>
+	<div id="contact-form">
+		Form
+	</div>
+
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script>
+	$(document).ready(function() {
+		$('#contact-button').click(function() {
+			$('#contact-form').slideToggle('slow',function() {
+				// animation complete
+			});
+		});
+	});
+	</script>
+
+</body>
