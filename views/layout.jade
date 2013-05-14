@@ -41,32 +41,26 @@ html
 
 		// content						
 		block content
-		
+
+		// footer		
 		block footer
-		// Footer
-		footer.footer
-			.footer-nav
-				.container
-					.row
-						nav.span4
-							h2 Help & Support
-							ul
-								li: a(href="faq.html") Frequently Asked Questions
-								li: a(href="mailto:service@jnrhandyman.com") service@jnrhandyman.com
-						nav.span4.offset1
-							h2 Follow Us
-							ul
-								li: a(href="http://twitter.com/jnrhandyman") Twitter
-								li: a(href="mailto:service@jnrhandyman.com") Facebook
-						nav.span3
-							h2 Connect
-							ul
-								li: a(href="tel:1-714-900-2139") 1-714-900-2139
-								li: a(href="/contact.html") Contact Us
-			.the-end
-				.container
-					| This site was designed by 
-					a(href='jeffsaenz.com') Jeff Saenz
+		footer
+			#footer
+				.footermenu
+					ul
+						li: a(href="/index.html") Home
+						li: &#124;
+						li: a(href="/contactus.html") Contact Us
+						li: &#124;
+						li: a(href="/estimate.html") Request Estimate
+						li: &#124;
+						li: a(href="/about.html") About
+
+				a(href="http://twitter.com/jnrhandyman", class="sb twitter") twitter
+				a(href="https://www.facebook.com/jnrhandymancom", class="sb facebook") facebook
+				a(href="https://plus.google.com/101002608316019553471", class="sb googleplus") google plus
+				a(href="mailto:jnrhandymancom@gmail.com", class="sb email") email
+
 		block scripts
 			script(src='http://code.jquery.com/jquery.js')
 			script(src='/javascripts/bootstrap.min.js')
