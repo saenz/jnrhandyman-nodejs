@@ -21,23 +21,20 @@ html
 				|  or 
 				a(href='http://www.google.com/chromeframe/?redirect=true') Install Google Chrome Frame
 				|  to experience this site.
-	
-		// Navbar
-		#jnr-top-nav.navbar.navbar-inverse.navbar-fixed-top
-			.navbar-inner
-				.container
-					button(type="button",class="btn btn-navbar",data-toggle="collapse",data-target=".nav-collapse")
-						span.icon-bar
-						span.icon-bar
-						span.icon-bar
-					a(class="brand",href="/") <img src="/images/jr_logo_horizontal.png"/>
-					// <h3>
-						a(href="tel:1-714-900-2139") 1-714-900-2139
-					.nav-collapse.collapse
-						ul.nav
-							li: a(href="/") Home
-							li: a(href="#about") About
-							li: a(href="/contactus") Contact Us
+
+		// header
+		header.header
+			.row-fluid
+				.span5
+					a(class="brand",href="/") 
+						img(src="/images/jr_logo_horizontal.png")
+				.visible-tablet.visible-desktop.span7
+					ul.hmenu(style="text-align:right")
+						li: a(href="/about.html") About
+						li: &#124;
+						li: a(href="/contactus.html") Contact Us
+						li: &#124;
+						li: a(href="/estimate.html") Free Estimate
 
 		// content						
 		block content
@@ -48,13 +45,11 @@ html
 			#footer
 				.footermenu
 					ul
-						li: a(href="/index.html") Home
+						li: a(href="/about.html") About
 						li: &#124;
 						li: a(href="/contactus.html") Contact Us
 						li: &#124;
-						li: a(href="/estimate.html") Request Estimate
-						li: &#124;
-						li: a(href="/about.html") About
+						li: a(href="/estimate.html") Free Estimate
 
 				a(href="http://twitter.com/jnrhandyman", class="sb twitter") twitter
 				a(href="https://www.facebook.com/jnrhandymancom", class="sb facebook") facebook
