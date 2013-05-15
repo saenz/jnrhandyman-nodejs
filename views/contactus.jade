@@ -1,5 +1,44 @@
 extends layout
 
 block content
-	h1 Content
-	p this is the contact us
+	.container
+		h2 Contact Us
+		p
+			| You can use this form to get in touch with Jeff and Russ, who run J&R. Simply choose who you would like to contact and
+			| type in your message, and it will be emailed to us.
+	
+		#contact-box.row-fluid
+			#left-col.span8
+				.form-step-1
+					.gform-wrapper
+						a.gform-anchor(id="gfa",name="gfa")
+						form.contact-form(id="contactform",method="post",enctype="multipart/form-data",onsubmit="return htmlFormsValidation.checkForm(htmlFormsValidationItems);",action="/contactus/#gfa")
+							.gform-body
+								ul#gform-fields-31.gform-fields.top-label
+									li.gfield.gfield-contains-required(id="field_31_1")
+										label.gfield-label(for="input_31_1",style="opacity: 1;") Full Name
+											span.gfield-required *
+										.ginput-container
+											input.medium.valid(name="input_1",id="input_31_1",type="text",tabindex="1",value)
+									li.gfield(id="field_31_26")
+										label.gfield-label(for="input_31_26") Phone Number
+										.ginput-container
+											input.medium(name="input_26",id="input_31_26",type="text",tabindex="2",value)
+									li.gfield.gfield-contains-required(id="field_31_3")
+										label.gfield-label(for="input_31_3") Email Address
+											span.gfield-required *
+										.ginput-container
+											input.medium(name="input_3",id="input_31_3",type="text",tabindex="3",value)
+									li.gfield(id="field_31_27")
+										label.gfield-label(for="input_31_27") Your Message
+										.ginput-container
+											textarea.textarea.medium(name="input_27",id="input_31_27",tabindex="4",rows="10")
+								.gform-footer.top-label
+									input.button.gform-button(type="submit",id="gform-submit-button-31",value="Get in Touch",tabindex="5")
+
+					
+			#right-col.span4.hidden-phone
+				.info-box
+					h3 Reach us by Phone
+					p 
+						| 714-900-2139

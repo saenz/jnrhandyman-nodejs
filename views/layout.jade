@@ -2,17 +2,18 @@
 !!! 5
 html
 	head
-		title #{title}
-		// styles
-		// link(rel='stylesheet',href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Ubuntu:400,700',try='text/css')
-		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
-		link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
-		link(rel='stylesheet', href='/stylesheets/main.css')
-		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1.0')
-		meta(name='description', content='J & R Handyman Services in Orange County')
-		link(rel='author', href='https://plus.google.com/u/1/110838921249868536327')
-		// fav icon
+		block head
+			title #{title}
+			// styles
+			// link(rel='stylesheet',href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Ubuntu:400,700',try='text/css')
+			link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+			link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+			link(rel='stylesheet', href='/stylesheets/main.css')
+			meta(charset='utf-8')
+			meta(name='viewport', content='width=device-width, initial-scale=1.0')
+			meta(name='description', content='J & R Handyman Services in Orange County')
+			link(rel='author', href='https://plus.google.com/u/1/110838921249868536327')
+			// fav icon
 	body
 		//if lt IE 7
 			p#chromeframe
@@ -32,9 +33,23 @@ html
 					ul.hmenu(style="text-align:right")
 						li: a(href="/about.html") About
 						li: &#124;
-						li: a(href="/contactus.html") Contact Us
+						li: a(href="/contactus") Contact Us
 						li: &#124;
 						li: a(href="/estimate.html") Free Estimate
+
+		// Billboard
+		#billboard
+			.row-fluid
+				.billboard-message
+					.span4.offset1
+						h1 Losing the fight with home repair?
+						h2 We'll whip that house back into shape. And if we can't do it we know someone who can.
+						.text-center
+							a(href="/contactus",class="btn") Contact Us
+				.visible-tablet.visible-desktop.span7
+					.video
+						img(style="display:none", src="/images/bg_video_intro.png", width=456, height=281)
+						.iframe(style="padding-top:25px;padding-left:25px;")
 
 		// content						
 		block content
