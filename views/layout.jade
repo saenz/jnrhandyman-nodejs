@@ -25,33 +25,35 @@ html
 
 		// header
 		header
-			section#global-nav
+			section#global-nav.hidden-phone
 				nav
 					.constrain
-						ul.links.tinynav
+						ul.links.topnav
 							li: a(href="/about.html") About
 							li: a(href="/contactus") Contact Us
 							li: a(href="/estimate.html") Free Estimate
 			
-		//
-			.row-fluid
-				.span5
-					a(class="brand",href="/") 
-						img(src="/images/jr_logo_horizontal.png")
-				.visible-tablet.visible-desktop.span7
-					ul.hmenu(style="text-align:right")
-						li: a(href="/about.html") About
-						li: &#124;
-						li: a(href="/contactus") Contact Us
-						li: &#124;
-						li: a(href="/estimate.html") Free Estimate
-
 		#container
 			.container
 				// logo
 				#logo-banner.constrain.clearfix
 					h2.logo
 						a(href="/",title="J & R Handyman") J & R Handyman
+
+				// nav phone
+					nav
+						#main.constrain.clearfix
+							.menu-top-container
+								select#tinynav(data-placeholder="Navigate...",style="display:none")
+									option
+									option(value="/about") About
+									option(value="/contactus") Contact Us
+									option(value="/estimate") Free Estimate
+								div(style='display:block;width:100%')
+									a(href="javascript:void(0)")
+										span Navigate...
+										div
+											strong
 
 				// content		
 				#content				
