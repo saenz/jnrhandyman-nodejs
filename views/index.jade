@@ -1,20 +1,29 @@
 extends layout
 
 block content
+	// Billboard
+	#billboard
+		.row-fluid
+			.billboard-message
+				.span4.offset1
+					h1 Losing the fight with home repair?
+					h2 We'll whip that house back into shape. And if we can't do it we know someone who can.
+					.text-center
+						a(href="/contactus",class="btn") Contact Us
+			.visible-tablet.visible-desktop.span7
+				.video
+					img(style="display:none", src="/images/bg_video_intro.png", width=456, height=281)
+					.iframe(style="padding-top:25px;padding-left:25px;")
 
-	// main container
-	.container
-		// .row
-			.span12
-
+	article
 		// Services
 		section.services
-			.row
+			.row-fluid
 				.span12
-					h2.section-head.center Range of Services
-					p.center.
-						We provide a number of maintenance services to help keep your home in shape. All work is guaranteed! A list of
-						services is shown below.
+					h2.block Range of Services
+				p.center.
+					We provide a number of maintenance services to help keep your home in shape. All work is guaranteed! A list of
+					services is shown below.
 			.row
 				.span12
 					.row
@@ -73,12 +82,12 @@ block content
 		
 		// Pricing
 		section.pricing
-			.row
+			.row-fluid
 				.span12
-					h2.section-head.center Reasonable Prices
+					h2.block Reasonable Prices
 				p.center.
 					You won't find a more reliable handyman service in the area with the same level of quality. And don't pay a dime until the work is completed.
-			.row
+			.row-fluid
 				.span6
 					p
 						strong Get a free estimate today!
@@ -111,14 +120,14 @@ block content
 
 		// Service Area
 		section.servicearea
-			.row
+			.row-fluid
 				.span12
-					h2.section-head.center Servicing Orange County
+					h2.block Servicing Orange County
 					p.center We are currently able to provide service to Cypress and outlying areas. The cities covered are shown in adjacent map.
-			.row
+			.row-fluid
 				.span6
 					h3 Here are some of the cities we service:
-					.row
+					.row-fluid
 						.span3
 							ul
 								li Anaheim
@@ -139,12 +148,12 @@ block content
 		
 		// Projects
 		section.projects
-			.row
+			.row-fluid
 				.span12
-					h2.section-head.center Latest Projects
+					h2.block Latest Projects
 					p.center
 						| Check out our J&R latest handyman projects. You name it we can do it! More coming soon.
-			.row
+			.row-fluid
 				.span8.offset2
 					#myCarousel.carousel.slide
 						ol.carousel-indicators
