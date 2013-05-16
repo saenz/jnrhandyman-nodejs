@@ -24,7 +24,16 @@ html
 				|  to experience this site.
 
 		// header
-		header.header
+		header
+			section#global-nav
+				nav
+					.constrain
+						ul.links.tinynav
+							li: a(href="/about.html") About
+							li: a(href="/contactus") Contact Us
+							li: a(href="/estimate.html") Free Estimate
+			
+		//
 			.row-fluid
 				.span5
 					a(class="brand",href="/") 
@@ -37,42 +46,36 @@ html
 						li: &#124;
 						li: a(href="/estimate.html") Free Estimate
 
-		// Billboard
-		#billboard
-			.row-fluid
-				.billboard-message
-					.span4.offset1
-						h1 Losing the fight with home repair?
-						h2 We'll whip that house back into shape. And if we can't do it we know someone who can.
-						.text-center
-							a(href="/contactus",class="btn") Contact Us
-				.visible-tablet.visible-desktop.span7
-					.video
-						img(style="display:none", src="/images/bg_video_intro.png", width=456, height=281)
-						.iframe(style="padding-top:25px;padding-left:25px;")
+		#container
+			.container
+				// logo
+				#logo-banner.constrain.clearfix
+					h2.logo
+						a(href="/",title="J & R Handyman") J & R Handyman
 
-		// content						
-		block content
+				// content		
+				#content				
+					block content
 
 		// footer		
 		block footer
 		footer
-			#footer
-				.footermenu
-					ul
-						li: a(href="/about.html") About
-						li: &#124;
-						li: a(href="/contactus.html") Contact Us
-						li: &#124;
-						li: a(href="/estimate.html") Free Estimate
+			// #footer
+			.footermenu
+				ul
+					li: a(href="/about.html") About
+					li: &#124;
+					li: a(href="/contactus.html") Contact Us
+					li: &#124;
+					li: a(href="/estimate.html") Free Estimate
 
-				a(href="http://twitter.com/jnrhandyman", class="sb twitter") twitter
-				a(href="https://www.facebook.com/jnrhandymancom", class="sb facebook") facebook
-				a(href="https://plus.google.com/101002608316019553471", class="sb googleplus") google plus
-				a(href="mailto:jnrhandymancom@gmail.com", class="sb email") email
+			a(href="http://twitter.com/jnrhandyman", class="sb twitter") twitter
+			a(href="https://www.facebook.com/jnrhandymancom", class="sb facebook") facebook
+			a(href="https://plus.google.com/101002608316019553471", class="sb googleplus") google plus
+			a(href="mailto:jnrhandymancom@gmail.com", class="sb email") email
 
-		block scripts
-			script(src='http://code.jquery.com/jquery.js')
-			script(src='/javascripts/bootstrap.min.js')
-			script(src='/javascripts/main.js')
+				block scripts
+					script(src='http://code.jquery.com/jquery.js')
+					script(src='/javascripts/bootstrap.min.js')
+					script(src='/javascripts/main.js')
 

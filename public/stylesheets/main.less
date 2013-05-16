@@ -15,14 +15,16 @@
 
 body {
   position: relative;
-  padding-top: 10px;
   background-color: #fff;
+  margin: 0;
 }
-
 /* Code in headings */
 h3 code {
   font-size: 14px;
   font-weight: normal;
+}
+menu, ol, ul {
+  padding: 0;
 }
 ul.bullet {
   list-style: circle url(/images/li-bullet.png) outside;
@@ -50,10 +52,114 @@ ul.hmenu {
     display: inline;
   }
 }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: "klavika-web", "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif !important;
+}
+
+/* Header 
+-----------------------------------------------*/
 .header {
   padding: 10px 0 0 0px;
   margin:0 12px 0px 10px;
   line-height: 47px;
+}
+.constrain {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#global-nav {
+  background: url(/images/global-nav.png) repeat-x 0 bottom #1b1b1b;
+  nav {
+    height: 34px;
+    ul {
+      text-align: left;
+      list-style: none;
+      display: inline;
+      float: left;
+      margin: 0;
+      list-style: none;
+      border-right: 1px solid rgba(255, 255, 255, 0.0976562);
+      border-left: 1px solid rgba(0, 0, 0, 0.347656);
+      &.links {
+        float: right;
+      }
+      li {
+        font: bold 13px/17px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+        display: inline-block;
+        float: left;
+        position: relative;
+        top: 1px;
+        cursor: pointer;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        text-shadow: 0 0px 2px #000;
+        border-left: 1px solid rgba(255, 255, 255, 0.0976562);
+        border-right: 1px solid rgba(0, 0, 0, 0.347656);
+        a {
+          color: #e6e6e6;
+          font-weight: normal;
+          font-style: normal;
+          text-decoration: none;
+          display: block;
+          padding: 8px 12px;
+        }
+      }
+    }
+  }
+} 
+#container {
+  background: #6D3353;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#container, footer {
+  border-top: 1px solid #020031;
+}
+#logo-banner {
+  clear: both;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+h2.logo {
+  float: left;
+  margin: 0;
+  width: 326px;
+  a {
+    float: left;
+    display: block;
+    height: 78px;
+    overflow: hidden;
+    text-indent: -1000px;
+    width: 326px;
+    background: url(/images/jr_logo_horizontal.png) no-repeat;
+  }
+}
+article {
+  background-color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -webkit-border-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  -moz-border-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+}
+h2.block {
+  padding: 10px 2%;
+  background: url(/images/gauze-gray.png) #ececec;
+  text-shadow: 0 1px 0 #ffffff;
+}
+#content {
+  position: relative;
+  h2 {
+    font-size: 24px;
+    line-height: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
 }
 /* Contact Form
 -------------------------------------------------*/
@@ -249,10 +355,15 @@ p {
 -------------------------------------------------- */
 #billboard {
   padding: 10px 0px 10px 0px;
-  margin: 0px 10px 20px 10px;
+  margin: 0px 0px 0px 0px;
   box-shadow:  0px 1px 2px rgba(0, 0, 0, 0.3);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
-  border-radius: 8px;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  -moz-border-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
   border: 1px solid #efefef;
   background: rgb(2, 0, 49);
   background: -moz-linear-gradient(45deg, rgb(2, 0, 49) 0%, rgb(109, 51, 83) 100%);
@@ -305,13 +416,7 @@ p {
 .servicearea ul {
   margin-bottom: 0px;
 }
-.section-head {
-	margin: 0 0 .75em 0;
-	padding: 5px 0 .25em 0;
-	font-weight: 100;
-	color: #BB8D47;
-	background: url(/images/ui_header_underline.png) no-repeat center bottom;
-}
+
 .map-label {
   width: auto;
   max-width:410px;
@@ -335,18 +440,18 @@ a:link, a:visited, a:hover {
 
 /* Footer
 -------------------------------------------------- */
-#footer {
-  margin-top: 10px;
+footer {
+  margin-top: -20px;
   text-align: center;
-  margin-bottom: 20px;
+  background-color: #DBDBA8;
+  padding: 30px 0 10px 0;
   ul {
     list-style: none;
     margin-left: 0;
+    li {
+      display: inline;
+    }
   }
-  ul li {
-    display: inline;
-  }
-
 }
 .footermenu {
   margin-bottom: 15px;
