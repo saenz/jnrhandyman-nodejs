@@ -1,4 +1,13 @@
-// layout.jade
+//- layout.jade
+//- author: jeff saenz
+//- ----------------------------------------------------------------------------------
+
+//- mixins
+mixin navitems
+	li(role="presentation"): a(role="menuitem",href="/") Home
+	li(role="presentation"): a(role="menuitem",href="/about.html") About
+	li(role="presentation"): a(role="menuitem",href="/estimate.html") Free Estimate
+
 !!! 5
 html
 	head
@@ -6,8 +15,7 @@ html
 			title #{title}
 			// styles
 			// link(rel='stylesheet',href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Ubuntu:400,700',try='text/css')
-			link(rel='stylesheet', href='/stylesheets/bootstrap.css')
-			link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.css')
+			link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
 			link(rel='stylesheet', href='/stylesheets/main.css')
 			meta(charset='utf-8')
 			meta(name='viewport', content='width=device-width, initial-scale=1.0')
@@ -25,13 +33,26 @@ html
 
 		// header
 		header
-			section#global-nav.hidden-phone
+			section#global-nav
 				nav
 					.constrain
-						ul.links.topnav
-							li: a(href="/about.html") About
-							li: a(href="/contactus") Contact Us
-							li: a(href="/estimate.html") Free Estimate
+						button.btn.btn-mini(style="float:right",type="button") Contact Us
+						//#contact-tab 
+							a(href="/contactus",title="Contact Us")
+								.visible-phone
+									i.icon-inbox.icon-white
+								span(style="margin-left:5px").hidden-phone Contact Us
+						ul.bignav.hidden-phone
+							mixin navitems
+						.btn-group.tinynav.visible-phone
+							button.btn.btn-inverse(role="button",data-toggle="dropdown",data-target="dropdown") 
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+							// a.dropdown-toggle(id="dLabel",role="button",data-toggle="dropdown",data-target="#",href="#") Menu
+								b.caret
+							ul.dropdown-menu(role="menu",aria-labelledby="dLabel")
+								mixin navitems
 			
 		#container
 			.container
@@ -40,21 +61,6 @@ html
 					h2.logo
 						a(href="/",title="J & R Handyman") J & R Handyman
 
-				// nav phone
-					nav
-						#main.constrain.clearfix
-							.menu-top-container
-								select#tinynav(data-placeholder="Navigate...",style="display:none")
-									option
-									option(value="/about") About
-									option(value="/contactus") Contact Us
-									option(value="/estimate") Free Estimate
-								div(style='display:block;width:100%')
-									a(href="javascript:void(0)")
-										span Navigate...
-										div
-											strong
-
 				// content		
 				#content				
 					block content
@@ -62,22 +68,20 @@ html
 		// footer		
 		block footer
 		footer
-			// #footer
-			.footermenu
-				ul
-					li: a(href="/about.html") About
-					li: &#124;
-					li: a(href="/contactus.html") Contact Us
-					li: &#124;
-					li: a(href="/estimate.html") Free Estimate
-
+			#footer-nav.text-center
+				nav
+					ul
+						mixin navitems
+			
 			a(href="http://twitter.com/jnrhandyman", class="sb twitter") twitter
 			a(href="https://www.facebook.com/jnrhandymancom", class="sb facebook") facebook
 			a(href="https://plus.google.com/101002608316019553471", class="sb googleplus") google plus
 			a(href="mailto:jnrhandymancom@gmail.com", class="sb email") email
+		
+		div.affix(data-spy="affix", data-offset-top="200") this is the bottom
 
-				block scripts
-					script(src='http://code.jquery.com/jquery.js')
-					script(src='/javascripts/bootstrap.min.js')
-					script(src='/javascripts/main.js')
+		block scripts
+			script(src='http://code.jquery.com/jquery.js')
+			script(src='/javascripts/bootstrap.min.js')
+			script(src='/javascripts/main.js')
 
